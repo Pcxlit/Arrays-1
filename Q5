@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n,m;
+    cout<<"enter value of rows and columns"<<endl;
+    cin>>n>>m;
+    int arr[n][m];
+    for (int i = 0; i<n ; i++)   //creating a 2d array
+    {
+        for (int j = 0; j < m; j++)
+        {
+           cout<<"enter value of "<<i<<j<<endl;
+           cin>>arr[i][j];
+        }
+        cout<<endl;
+    }
+
+
+    for (int i = 0; i<n ; i++) //display the array
+    {
+        for (int j = 0; j < m; j++)
+        {
+           cout<<arr[i][j]<<" ";
+        }
+         cout<<endl;
+    }
+
+
+    int x;              // finding sum of row
+    cout<<"find sum of x row"<<endl;
+    cin>>x;
+    int sumr=0;
+    for (int k = 1; k <= m; k++)
+    {
+        sumr=(arr[x][k]+sumr);
+    }
+    cout<<sumr<<endl;
+
+
+    
+    int y;            //finding sum of column
+    cout<<"find sum of y column"<<endl;
+    cin>>y;
+    int sumc=0;
+    for (int z = 1; z <= n; z++)
+    {
+        sumc=(arr[z][y]+sumc);
+    }
+    cout<<sumc;
+    return 0;
+}
